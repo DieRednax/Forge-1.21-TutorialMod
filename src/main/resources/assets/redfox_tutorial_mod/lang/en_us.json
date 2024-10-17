@@ -1,4 +1,7 @@
 {
   "item.redfox_tutorial_mod.alexandrite": "Alexandrite",
-  "item.redfox_tutorial_mod.raw_alexandrite": "Raw Alexandrite"
+  "item.redfox_tutorial_mod.raw_alexandrite": "Raw Alexandrite",
+
+  "block.redfox_tutorial_mod.alexandrite_block": "Block of Alexandrite",
+  "block.redfox_tutorial_mod.raw_alexandrite_block": "Block of Raw Alexandrite"
 }

@@ -1,6 +1,8 @@
 package com.redfox.tutorial_mod_1_21;
 
 import com.mojang.logging.LogUtils;
+import com.redfox.tutorial_mod_1_21.block.ModBlocks;
+import com.redfox.tutorial_mod_1_21.item.ModCreativeModeTabs;
 import com.redfox.tutorial_mod_1_21.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -35,6 +37,7 @@ public class TutorialMod_1_21 {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -52,6 +55,10 @@ public class TutorialMod_1_21 {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         }
     }
 
