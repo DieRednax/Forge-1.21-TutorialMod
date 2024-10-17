@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import com.redfox.tutorial_mod_1_21.block.ModBlocks;
 import com.redfox.tutorial_mod_1_21.item.ModCreativeModeTabs;
 import com.redfox.tutorial_mod_1_21.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +34,8 @@ public class TutorialMod_1_21 {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
